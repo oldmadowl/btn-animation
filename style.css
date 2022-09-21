@@ -1,0 +1,200 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  background-color: maroon;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.present-btn {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  background-color: transparent;
+  border: none;
+  border-radius: 2px;
+  height: 29px;
+  padding: 0 10px;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.present-btn::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  width: 100%;
+  height: 100%;
+}
+
+.present-btn__text,
+.present-btn__icon {
+  position: relative;
+  z-index: 3;
+}
+
+.present-btn__text {
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  color: black;
+  line-height: normal;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+.present-btn__icon {
+  vertical-align: middle;
+}
+
+
+/* animation */
+
+.present-btn--clicked {
+  animation-name: btnOverflow;
+  animation-duration: .1s;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+}
+
+.present-btn--clicked::before {
+  opacity: .8;
+  animation-name: bgAnimation;
+  animation-duration: .2s;
+  animation-timing-function: linear;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+}
+
+.present-btn--clicked .present-btn__text {
+  animation-name: textAnimation;
+  animation-duration: 1s;
+  animation-timing-function: cubic-bezier(.29,-0.42,.52,1.29);
+  animation-fill-mode: forwards;
+}
+
+.present-btn--clicked .present-btn__icon {
+  animation-name: iconAnimation;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in;
+  animation-delay: .5s;
+}
+
+@keyframes btnOverflow {
+  0% {
+    overflow: hidden;
+  }
+  100% {
+    overflow: visible;
+  }
+}
+
+@keyframes bgAnimation {
+  0% {
+    opacity: .8;
+  }  
+  50% {
+    opacity: .5;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes textAnimation {
+  0% {
+    top: 0;
+  }
+  50% {
+    top: 200%;
+  }
+  100% {
+    top: 200%;
+    opacity: 0;
+  }
+}
+
+@keyframes iconAnimation {
+  0% {
+    right: 0;
+    transform: translateX(0) rotate(0);
+  }
+  4% {
+    right: 10%;
+    transform: translateX(0) rotate(10deg);
+  }
+  8% {
+    right: 20%;
+    transform: translateX(0) rotate(10deg);
+  }
+  12% {
+    right: 30%;
+    transform: translateX(20%) rotate(10deg);
+  }
+  16% {
+    right: 40%;
+    transform: translateX(20%) rotate(10deg);
+  }
+  20% {
+    right: 50%;
+    transform: translateX(20%) rotate(10deg);
+  }
+  24% {
+    right: 60%;
+    transform: translateX(20%) rotate(-10deg);
+  }
+  30% {
+    right: 50%;
+    transform: translateX(50%) rotate(10deg);
+  }
+  34% {
+    right: 50%;
+    transform: translateX(50%) rotate(0);
+  }
+  40% {
+    right: 50%;
+    transform: translateX(50%) rotate(0) scale(1.5);
+  }
+  60% {
+    right: 50%;
+    transform: translateX(50%) rotate(0) scale(1.2);
+  }
+  70% {
+    right: 50%;
+    transform: translateX(50%) rotate(0) scale(1.5);
+  }
+  80% {
+    right: 50%;
+    transform: translateX(50%) rotate(0) scale(1.3);
+  }
+  /* 90% {
+    right: 50%;
+    transform: translateX(50%) rotate(-10deg) scale(5);
+  }
+  93% {
+    right: 50%;
+    transform: translateX(50%) rotate(10deg) scale(5);
+  }
+  96% {
+    right: 50%;
+    transform: translateX(50%) rotate(-10deg) scale(5);
+  }
+  99% {
+    right: 50%;
+    transform: translateX(50%) rotate(10deg) scale(5);
+  } */
+  100% {
+    right: 50%;
+    transform: translateX(50%) rotate(0) scale(5);
+  }
+}
