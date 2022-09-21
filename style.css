@@ -119,48 +119,45 @@
 @keyframes drawPresent {
   0% {
     stroke: #fff;
-    stroke-dashoffset: 171;
+    stroke-dashoffset: 170;
     stroke-dasharray: 10;
+    opacity: 1;
   }
-  10% {
+  17% {
     stroke: #fff;
-    stroke-dashoffset: 120;
+    stroke-dashoffset: 140;
     stroke-dasharray: 10;
+    opacity: 1;
   }
-  20% {
+  34% {
+    stroke: #fff;
+    stroke-dashoffset: 110;
+    stroke-dasharray: 10;
+    opacity: 1;
+  }
+  51% {
     stroke: #fff;
     stroke-dashoffset: 80;
     stroke-dasharray: 10;
+    opacity: 1;
   }
-  30% {
+  68% {
     stroke: #fff;
-    stroke-dashoffset: 40;
+    stroke-dashoffset: 50;
     stroke-dasharray: 10;
+    opacity: 1;
   }
-  40% {
+  85% {
     stroke: #fff;
     stroke-dashoffset: 20;
     stroke-dasharray: 10;
-  }
-  50% {
-    stroke: #fff;
-    stroke-dashoffset: 0;
-    stroke-dasharray: 10;
-  }
-  60% {
-    stroke: #fff;
-    stroke-dashoffset: 0;
-    stroke-dasharray: 70;
-  }
-  70% {
-    stroke: #fff;
-    stroke-dashoffset: 0;
-    stroke-dasharray: none;
+    opacity: 1;
   }
   100% {
     stroke: #fff;
     stroke-dashoffset: 0;
-    stroke-dasharray: none;
+    stroke-dasharray: 10;
+    opacity: 0;
   }
 } 
 
