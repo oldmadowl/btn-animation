@@ -68,13 +68,13 @@
 
 .present-btn--clicked::before {
   animation-name: bgAnimation;
-  animation-duration: .2s;
-  animation-timing-function: linear;
-  animation-delay: 2.2s;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in;
+  animation-delay: 1.25s;
   animation-fill-mode: forwards;
 }
 
-.present-btn--clicked::after {
+/* .present-btn--clicked::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -83,13 +83,13 @@
   background-color: #fff;
   height: 100%;
   width: 100%;
-  border-radius: 50%;
+  border-radius: 2px;
   animation-name: boomAnimation;
   animation-timing-function: ease-in;
   animation-duration: 1.5s;
   animation-delay: 1.25s;
   animation-fill-mode: forwards;
-}
+} */
 
 .present-btn--clicked .present-btn__text {
   animation-name: textAnimation;
@@ -168,7 +168,7 @@
   }
 } 
 
-@keyframes boomAnimation {
+/* @keyframes boomAnimation {
   0% {
     height: 100%;
   }
@@ -194,7 +194,7 @@
     width: 170px;
     opacity: 0;
   }
-}
+} */
 
 @keyframes btnOverflow {
   0% {
@@ -205,7 +205,7 @@
   }
 }
 
-@keyframes bgAnimation {
+/* @keyframes bgAnimation {
   0% {
     opacity: 1;
   }  
@@ -217,6 +217,44 @@
   }
   100% {
     opacity: 0;
+  }
+} */
+
+@keyframes bgAnimation {
+  0% {
+    height: 100%;
+  }
+  20%{
+    height: 60px;
+    width: 80%;
+    border-radius: 40%;
+  }
+  35%{
+    height: 40px;
+    width: 90%;
+    border-radius: 2px;
+  }
+  50%{
+    height: 70px;
+    width: 70%;
+    border-radius: 40%;
+  }
+  60%{
+    height: 50px;
+    width: 80%;
+    border-radius: 2px;
+  }
+  80%{
+    height: 150px;
+    width: 150px;
+    opacity: 1;
+    border-radius: 50%;
+  }
+  100% {
+    height: 170px;
+    width: 170px;
+    opacity: 0;
+    border-radius: 50%;
   }
 }
 
@@ -272,19 +310,19 @@
   }
   50% {
     right: 50%;
-    transform: translateX(50%) rotate(0) scale(1.5);
+    transform: translateX(50%) rotate(0) scale(2);
   }
   60% {
     right: 50%;
-    transform: translateX(50%) rotate(0) scale(1.2);
+    transform: translateX(50%) rotate(0) scale(1.6);
   }
   70% {
     right: 50%;
-    transform: translateX(50%) rotate(0) scale(1.5);
+    transform: translateX(50%) rotate(0) scale(2.2);
   }
   80% {
     right: 50%;
-    transform: translateX(50%) rotate(0) scale(1.3);
+    transform: translateX(50%) rotate(0) scale(1.8);
   }
   90% {
     right: 50%;
